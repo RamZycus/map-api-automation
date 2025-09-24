@@ -1,0 +1,30 @@
+{
+  "environment": "PROD",
+  "baseUrl": "https://api.zycus.com",
+  "tenants": {
+    "ZCS": {
+      "tenantId": "prod-tenant-id-here",
+      "apiEndpoints": {
+        "createFlowPost": "/map-bk/api/v1/flows",
+        "createAgentPost": "/map-bk/api/v1/agents",
+        "getAgentById": "/map-bk/api/v1/agents",
+        "getAgentsByFlowId": "/map-bk/api/v1/agents",
+        "deleteFlowPost": "/map-bk/api/v1/flows",
+        "deleteAgentPost": "/map-bk/api/v1/agents"
+      },
+      "defaultHeaders": {
+        "Content-Type": "application/json",
+        "x-zycus-tenantId": "prod-tenant-id-here"
+      },
+      "testData": {
+        "flows": {
+          "validFlow": {
+            "name": "Prod Test Flow",
+            "description": "Prod Test Flow Description",
+            "logoPath": "/public/images/ANA.svg"
+          }
+        }
+      }
+    }
+  }
+}

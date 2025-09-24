@@ -1,0 +1,36 @@
+{
+  "apiName": "createFlowPost",
+  "timestamp": "2025-09-24T05:37:19.122Z",
+  "request": {
+    "method": "POST",
+    "url": "http://hpx-up1.app.inmu.qc.zycus.local:39405/map-bk/api/v1/flows",
+    "headers": {
+      "Content-Type": "application/json",
+      "x-zycus-tenantId": "732b3fc1-687b-42ac-b71f-d755fe90de04"
+    },
+    "payload": {
+      "name": "Test Flow 1758692239035",
+      "description": "Test Flow Description",
+      "logoPath": "/public/images/ANA.svg"
+    },
+    "endpoint": "/map-bk/api/v1/flows"
+  },
+  "response": {
+    "statusCode": 201,
+    "body": {
+      "id": "68d3838f251fcfaf5dcbd4fb",
+      "name": "Test Flow 1758692239035",
+      "description": "Test Flow Description",
+      "logoPath": "/public/images/ANA.svg",
+      "tenantId": null,
+      "createdAt": "2025-09-24T05:37:19.000Z",
+      "updatedAt": "2025-09-24T05:37:19.000Z"
+    },
+    "success": true
+  },
+  "environment": {
+    "setup": "QC",
+    "tenant": "ZCS",
+    "baseUrl": "http://hpx-up1.app.inmu.qc.zycus.local:39405"
+  }
+}

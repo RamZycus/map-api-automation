@@ -1,0 +1,64 @@
+{
+  "environment": "QC",
+  "baseUrl": "http://hpx-up1.app.inmu.qc.zycus.local:39405",
+  "tenants": {
+    "ZCS": {
+      "tenantId": "732b3fc1-687b-42ac-b71f-d755fe90de04",
+      "apiEndpoints": {
+        "createFlowPost": "/map-bk/api/v1/flows",
+        "createAgentPost": "/map-bk/api/v1/agents",
+        "getAgentById": "/map-bk/api/v1/agents",
+        "getAgentsByFlowId": "/map-bk/api/v1/agents",
+        "getFlowById": "/map-bk/api/v1/flows",
+        "deleteFlowPost": "/map-bk/api/v1/flows",
+        "deleteAgentPost": "/map-bk/api/v1/agents"
+      },
+      "defaultHeaders": {
+        "Content-Type": "application/json",
+        "x-zycus-tenantId": "732b3fc1-687b-42ac-b71f-d755fe90de04"
+      },
+      "testData": {
+        "flows": {
+          "validFlow": {
+            "name": "Test Flow",
+            "description": "Test Flow Description",
+            "logoPath": "/public/images/ANA.svg"
+          }
+        },
+        "agents": {
+          "validAgent": {
+            "name": "Test Agent",
+            "description": "Test Agent Description",
+            "type": "custom",
+            "flowId": "",
+            "configuration": {
+              "model": "gpt-3.5-turbo",
+              "temperature": 0.7,
+              "maxTokens": 1000
+            }
+          }
+        }
+      }
+    },
+    "RM_ZCS": {
+      "tenantId": "732b3fc1-687b-42ac-b71f-d755fe90de04",
+      "apiEndpoints": {
+        "createFlowPost": "/map-bk/api/v1/flows",
+        "createAgentPost": "/map-bk/api/v1/agents"
+      },
+      "defaultHeaders": {
+        "Content-Type": "application/json",
+        "x-zycus-tenantId": "732b3fc1-687b-42ac-b71f-d755fe90de04"
+      },
+      "testData": {
+        "flows": {
+          "validFlow": {
+            "name": "RM Test Flow",
+            "description": "RM Test Flow Description",
+            "logoPath": "/public/images/RM.svg"
+          }
+        }
+      }
+    }
+  }
+}

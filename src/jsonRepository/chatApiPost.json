@@ -1,0 +1,23 @@
+{
+  "conversationref": {
+    "conversation_id": "testing_jai_244",
+    "activity_id": "",
+    "user_id": "955d3bda-a85d-4e01-afc5-511d33a476be",
+    "tenant_id": "aebb6598-276a-4266-afeb-f950334c9845",
+    "utterance_id": "qc_testing_09_01_25_3_48",
+    "checkpoint_id": "",
+    "consulWrapperUrlDomain": "https://dewdrops-rp.zycus.com",
+    "saas_token": "be5a40b7-55ad-4019-ba11-beadc8bb4c24",
+    "env": "QC"
+  },
+  "payload": {
+    "message": "search pr123",
+    "replyTo": {
+      "callback": {
+        "headers": {},
+        "url": "https://vendor-dev.zycus.net/merlinassist/api/callback/intent"
+      }
+    }
+  },
+  "devFlag": true
+}

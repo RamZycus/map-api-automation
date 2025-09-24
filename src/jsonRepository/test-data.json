@@ -1,0 +1,179 @@
+{
+  "flows": {
+    "validFlow": {
+      "name": "Test_Auto_Flow_001",
+      "description": "Test Auto Flow for automation testing",
+      "logoPath": "/public/images/ANA.svg"
+    },
+    "invalidFlow": {
+      "name": "",
+      "description": "",
+      "logoPath": ""
+    },
+    "updatedFlow": {
+      "name": "Updated_Test_Auto_Flow_001",
+      "description": "Updated Test Auto Flow for automation testing",
+      "logoPath": "/public/images/Updated.svg"
+    }
+  },
+  "agents": {
+    "validAgent": {
+      "flowId": "68c6cababbb2e4a9d6575433",
+      "name": "Test Automation Agent",
+      "description": "This is a test agent created for automation testing purposes. It handles basic user interactions and provides helpful responses.",
+      "isActive": true,
+      "type": "USER",
+      "sections": [
+        {
+          "type": "ROLE_OBJECTIVES",
+          "sectionDetails": [
+            {
+              "title": "Role & Objective",
+              "description": "Your primary goal is to assist users with their queries and provide helpful responses.",
+              "workflowSteps": null,
+              "editable": true
+            }
+          ]
+        },
+        {
+          "type": "AGENT_TRIGGER",
+          "sectionDetails": [
+            {
+              "title": "Agent Trigger",
+              "description": "Trigger this agent when users need general assistance or have questions.",
+              "workflowSteps": null,
+              "editable": true
+            }
+          ]
+        },
+        {
+          "type": "INSTRUCTIONS",
+          "sectionDetails": [
+            {
+              "title": "General Behavior",
+              "description": "Be helpful, polite, and provide accurate information to users.",
+              "workflowSteps": null,
+              "editable": true
+            }
+          ]
+        }
+      ]
+    },
+    "invalidAgent": {
+      "flowId": "",
+      "name": "",
+      "description": "",
+      "isActive": "invalid",
+      "type": "INVALID"
+    },
+    "redirectionAgent": {
+      "flowId": "68c6cababbb2e4a9d6575433",
+      "name": "Redirection Agent",
+      "description": "You are the Redirection Agent operating within a multi-agent architecture. You specialize in detecting event-related or travel-related intents and redirecting users to the appropriate external platforms for further action.",
+      "isActive": true,
+      "type": "USER",
+      "sections": [
+        {
+          "type": "ROLE_OBJECTIVES",
+          "sectionDetails": [
+            {
+              "title": "Role & Objective",
+              "description": "Your primary goal is to interpret user input and identify whether the request relates to organizing a meeting, hosting an event, or booking travel.",
+              "workflowSteps": null,
+              "editable": true
+            }
+          ]
+        },
+        {
+          "type": "AGENT_TRIGGER",
+          "sectionDetails": [
+            {
+              "title": "Agent Trigger",
+              "description": "Trigger this agent when the user expresses an intent related to organizing a meeting, workshop, or client event, or booking travel.",
+              "workflowSteps": null,
+              "editable": true
+            }
+          ]
+        },
+        {
+          "type": "WORKFLOW",
+          "sectionDetails": [
+            {
+              "title": null,
+              "description": null,
+              "workflowSteps": [
+                {
+                  "stepNumber": null,
+                  "name": "STEP_01_IDENTIFY_REDIRECTION_INTENT",
+                  "prompt": "Use intent classification to determine whether the user is referring to a Meeting/Event or Travel use case.",
+                  "example": "",
+                  "tools": [],
+                  "editable": true
+                }
+              ],
+              "editable": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "apiEndpoints": {
+    "flows": {
+      "base": "/map-bk/api/v1/flows",
+      "getAll": "/map-bk/api/v1/flows",
+      "getById": "/map-bk/api/v1/flows/{id}",
+      "create": "/map-bk/api/v1/flows",
+      "update": "/map-bk/api/v1/flows/{id}",
+      "delete": "/map-bk/api/v1/flows/{id}"
+    },
+    "agents": {
+      "base": "/map-bk/api/v1/agents",
+      "getAll": "/map-bk/api/v1/agents",
+      "getById": "/map-bk/api/v1/agents/{id}",
+      "getByFlowId": "/map-bk/api/v1/agents?flowId={flowId}",
+      "create": "/map-bk/api/v1/agents",
+      "update": "/map-bk/api/v1/agents/{id}",
+      "delete": "/map-bk/api/v1/agents"
+    }
+  },
+  "testScenarios": {
+    "positive": {
+      "description": "Valid data scenarios",
+      "expectedStatus": [200, 201, 204]
+    },
+    "negative": {
+      "description": "Invalid data scenarios",
+      "expectedStatus": [400, 401, 403, 404, 422]
+    },
+    "edgeCases": {
+      "description": "Boundary value testing",
+      "scenarios": [
+        "empty_strings",
+        "null_values",
+        "max_length_strings",
+        "special_characters",
+        "unicode_characters"
+      ]
+    }
+  },
+  "deleteOperations": {
+    "deleteFlow": {
+      "flowIds": ["68c2a10389a4062e7aa338a7"]
+    },
+    "deleteAgent": {
+      "agentIds": ["68c2a10389a4062e7aa338a8"]
+    }
+  },
+  "environment": {
+    "baseUrl": "http://hpx-up1.app.inmu.qc.zycus.local:39405",
+    "headers": {
+      "Content-Type": "application/json",
+      "accept": "*/*",
+      "accept-language": "en-US,en-GB;q=0.9,en;q=0.8,hi;q=0.7",
+      "origin": "https://merlin-agentic-platform.zycus.com",
+      "referer": "https://merlin-agentic-platform.zycus.com/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+    }
+  }
+}

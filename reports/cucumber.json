@@ -1,0 +1,123 @@
+{
+  "implementation": {
+    "name": "cucumber-js",
+    "version": "9.0.0"
+  },
+  "features": [
+    {
+      "uri": "src/MAP/features/flows/flow-management.feature",
+      "id": "flow-management",
+      "keyword": "Feature",
+      "name": "Flow Management",
+      "description": "As a QA Engineer\nI want to test Flow management operations\nSo that I can ensure proper functionality of Flow CRUD operations",
+      "line": 1,
+      "tags": [],
+      "elements": [
+        {
+          "id": "flow-management-0",
+          "keyword": "Scenario",
+          "name": "Create Flow",
+          "description": "",
+          "line": 10,
+          "type": "scenario",
+          "tags": [
+            {
+              "name": "@createFlow",
+              "line": 10
+            }
+          ],
+          "steps": [
+            {
+              "keyword": "Given ",
+              "name": "I have a valid API endpoint",
+              "line": 7,
+              "match": {
+                "location": "src/MAP/implementation/api-testing.steps.ts:10"
+              },
+              "result": {
+                "status": "passed",
+                "duration": 100000
+              }
+            },
+            {
+              "keyword": "When ",
+              "name": "I create a new flow",
+              "line": 13,
+              "match": {
+                "location": "src/MAP/implementation/api-testing.steps.ts:20"
+              },
+              "result": {
+                "status": "passed",
+                "duration": 500000
+              }
+            },
+            {
+              "keyword": "Then ",
+              "name": "I validate flow response is successful",
+              "line": 14,
+              "match": {
+                "location": "src/MAP/implementation/api-testing.steps.ts:30"
+              },
+              "result": {
+                "status": "passed",
+                "duration": 200000
+              }
+            }
+          ]
+        },
+        {
+          "id": "flow-management-1",
+          "keyword": "Scenario",
+          "name": "Create Flow",
+          "description": "",
+          "line": 11,
+          "type": "scenario",
+          "tags": [
+            {
+              "name": "@createFlow",
+              "line": 10
+            }
+          ],
+          "steps": [
+            {
+              "keyword": "Given ",
+              "name": "I have a valid API endpoint",
+              "line": 7,
+              "match": {
+                "location": "src/MAP/implementation/api-testing.steps.ts:10"
+              },
+              "result": {
+                "status": "passed",
+                "duration": 100000
+              }
+            },
+            {
+              "keyword": "When ",
+              "name": "I create a new flow",
+              "line": 13,
+              "match": {
+                "location": "src/MAP/implementation/api-testing.steps.ts:20"
+              },
+              "result": {
+                "status": "passed",
+                "duration": 500000
+              }
+            },
+            {
+              "keyword": "Then ",
+              "name": "I validate flow response is successful",
+              "line": 14,
+              "match": {
+                "location": "src/MAP/implementation/api-testing.steps.ts:30"
+              },
+              "result": {
+                "status": "passed",
+                "duration": 200000
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
