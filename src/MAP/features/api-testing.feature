@@ -63,7 +63,7 @@ Feature: MAP API Testing - Flow and Agent Management
         Then I validate response is successful
         And I validate response status is 200
 
-    @oldCompleteWorkflow
+    @OldCompleteWorkflow
     Scenario: Complete Flow and Agent Lifecycle (Old Version)
         Given I prepare default post request for api "createFlowPost"
         When I submit post request for api "createFlowPost"
